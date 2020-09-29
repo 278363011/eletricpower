@@ -33,7 +33,7 @@ public class NettyClient {
                 });
 
         try {
-            ChannelFuture future = bootstrap.connect("127.0.0.1", 9999).sync();
+            ChannelFuture future = bootstrap.connect("127.0.0.1", 8899).sync();
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();
