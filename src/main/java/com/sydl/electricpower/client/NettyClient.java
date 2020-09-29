@@ -1,6 +1,6 @@
 package com.sydl.electricpower.client;
 
-import com.sydl.electricpower.endecode.MyCustomMessageEncoder;
+import com.sydl.electricpower.endecode.CustomMessageEncoder;
 import com.sydl.electricpower.handler.ClientMessageHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -27,7 +27,7 @@ public class NettyClient {
                     @Override
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
                         // 增加自定义编码器
-                        socketChannel.pipeline().addLast(new MyCustomMessageEncoder());
+                        socketChannel.pipeline().addLast(new CustomMessageEncoder());
                         socketChannel.pipeline().addLast(new ClientMessageHandler());
                     }
                 });

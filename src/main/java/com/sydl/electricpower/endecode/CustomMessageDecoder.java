@@ -6,7 +6,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 
 import java.util.List;
 
-public class MyCustomMessageDecoder extends ByteToMessageDecoder {
+public class CustomMessageDecoder extends ByteToMessageDecoder {
 
     // 消息头：发送端写的是一个int，占用4字节。
     private final static int HEAD_LENGTH = 4;
